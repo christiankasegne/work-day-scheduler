@@ -2,12 +2,7 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+If you need wed based work day scheduler backed with local storage then look no ferther. This app is time/color coded, past time is gray, current is red and future is green. let the work day scheduler keep you organized.
 
 ## Installation
 
@@ -15,12 +10,16 @@ N/A
 
 ## Usage
 
-![alt text](assets/images/screenshot.png)
+
 
 ## Credits
 
 https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css
-https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js
+https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js
+https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js
+
+
+
 
 ## License
 

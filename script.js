@@ -1,13 +1,37 @@
 $(document).ready(function () {
+  dayjs().format('Q Do k kk X x')
+  var currentDay = dayjs().format('dddd, MMMM, D');
 
-  var currentDay = dayjs().format("dddd, MMMM, Do");
-  
-  $("#currentDay").text(currentDay);
+  $('#currentDay').text(currentDay);
+});
 
-  
-})
+var saveBtn = document.querySelectorAll('.saveBtn');
 
-let nowHour = 13; 
-$('.description').addClass(function() {
-  return +this.id === nowHour ? 'present' : +this.id < nowHour ? 'past' : 'future'; 
+saveBtn.forEach(function (node) {
+  node.addEventListener('click', function () {
+    var description = $(this).siblings('.description').val();
+
+    var time = $(this).parent().attr('id');
+
+    localStorage.setItem(time, description);
+  });
+});
+
+$('#hour-9 .description').val(localStorage.getItem('hour-9'));
+$('#hour-10 .description').val(localStorage.getItem('hour-10'));
+$('#hour-11 .description').val(localStorage.getItem('hour-11'));
+$('#hour-12 .description').val(localStorage.getItem('hour-12'));
+$('#hour-13 .description').val(localStorage.getItem('hour-13'));
+$('#hour-14 .description').val(localStorage.getItem('hour-14'));
+$('#hour-15 .description').val(localStorage.getItem('hour-15'));
+$('#hour-16 .description').val(localStorage.getItem('hour-16'));
+$('#hour-17 .description').val(localStorage.getItem('hour-17'));
+
+let nowHour = 13;
+$('.description').addClass(function () {
+  return +this.id === nowHour
+    ? 'present'
+    : +this.id < nowHour
+    ? 'past'
+    : 'future';
 });
