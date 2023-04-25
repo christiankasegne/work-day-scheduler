@@ -1,8 +1,13 @@
 $(document).ready(function () {
+
   var currentDay = dayjs().format("dddd, MMMM, Do");
+  
   $("#currentDay").text(currentDay);
 
-
-  var presentTime = dayjs().format("");
   
 })
+
+let nowHour = 13; 
+$('.description').addClass(function() {
+  return +this.id === nowHour ? 'present' : +this.id < nowHour ? 'past' : 'future'; 
+});
