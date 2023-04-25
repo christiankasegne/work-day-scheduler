@@ -1,8 +1,8 @@
 $(document).ready(function () {
-  var currentDay = moment().format("dddd, MMMM, Do");
+  var currentDay = dayjs().format("dddd, MMMM, Do");
   $("#currentDay").text(currentDay);
 
 
-  var presentTime = moment().format("H");
+  var presentTime = dayjs().format("");
   
 })
