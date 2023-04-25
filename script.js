@@ -1,14 +1,12 @@
 $(document).ready(function () {
-  dayjs().format('Q Do k kk X x')
   var currentDay = dayjs().format('dddd, MMMM, D');
-
   $('#currentDay').text(currentDay);
 });
 
 var saveBtn = document.querySelectorAll('.saveBtn');
 
-saveBtn.forEach(function (node) {
-  node.addEventListener('click', function () {
+saveBtn.forEach(function (window) {
+  window.addEventListener('click', function () {
     var description = $(this).siblings('.description').val();
 
     var time = $(this).parent().attr('id');
@@ -27,11 +25,17 @@ $('#hour-15 .description').val(localStorage.getItem('hour-15'));
 $('#hour-16 .description').val(localStorage.getItem('hour-16'));
 $('#hour-17 .description').val(localStorage.getItem('hour-17'));
 
-let nowHour = 13;
-$('.description').addClass(function () {
-  return +this.id === nowHour
+
+
+
+// the color is not working... no matter what logic I try IT WON'T WORK! I give in.
+var now = dayjs(`h`)
+let nowtHour = '';
+$('.time-block').addClass(function () {
+  return +this.id === nowtHour
     ? 'present'
-    : +this.id < nowHour
+    : +this.id < nowtHour
     ? 'past'
     : 'future';
 });
+
