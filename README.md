@@ -2,6 +2,11 @@
 
 ## Description
 
+
+![alt text](Screenshot%202023-04-25%20at%205.25.54%20PM.png/images/screenshot.png)
+
+
+
 If you need wed based work day scheduler backed with local storage then look no ferther. This app is time/color coded, past time is gray, current is red and future is green. let the work day scheduler keep you organized.
 
 ## Installation
@@ -10,7 +15,7 @@ N/A
 
 ## Usage
 
-
+Schedule
 
 ## Credits
 
